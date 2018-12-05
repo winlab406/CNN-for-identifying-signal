@@ -1,7 +1,7 @@
 #######################################load data and label them#####################################################
-signal_data_path = 'D:/Python35/Scripts/signal_classification/noise_signal_black/signal_noise_black/1'
-black_data_path = 'D:/Python35/Scripts/signal_classification/noise_signal_black/signal_noise_black/-1'
-noise_data_path = 'D:/Python35/Scripts/signal_classification/noise_signal_black/signal_noise_black/0'
+signal_data_path = 'noise_signal_black/signal_noise_black/1'
+black_data_path = 'noise_signal_black/signal_noise_black/-1'
+noise_data_path = 'noise_signal_black/signal_noise_black/0'
 import os
 import json
 import numpy as np
@@ -106,7 +106,7 @@ new_test=pca.transform(nom_X_test1)
 new_test=np.reshape(new_test,(X_test_nsamples,time_of_spe,-1))
 print("pca on testdata done")
 '''
-##################### ############################train CNN###################################################################
+##################### ############################build CNN and train the model###################################################################
 from keras import layers
 y_train=to_categorical(y_train)
 model = models.Sequential()
